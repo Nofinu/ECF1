@@ -27,13 +27,12 @@ export const AddUser = createAsyncThunk(
 export const AddIMC = createAsyncThunk(
   "User/AddIMC",
   async ({id,...IMCValue},{getState})=>{
-    console.log("ok")
     const token = getState().auth.user.idToken
     const users = getState().user.users
     const userFound = {...users.find(user=> user.id === id)}
     if(userFound){
       let usertmp = {...userFound}
-      usertmp.IMC=[...userFound.IMC,{...IMCValue}]//.sort((a,b)=>new Date(a.date) - new Date(b.date))
+      usertmp.IMC=[...userFound.IMC,{...IMCValue}].sort((a,b)=>new Date(a.date) - new Date(b.date))
       //sort a revoir
       if(token){
         const response = await fetch(`${BaseUrl}user/${id}.json?auth=${token}`,{

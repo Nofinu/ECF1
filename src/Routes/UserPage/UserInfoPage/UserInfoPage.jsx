@@ -22,7 +22,6 @@ export const UserinfoPage=()=>{
     setModalIMCStatus(!modalIMCStatus)
   }
 
-  
 
   return(
     <div className="infoUserContainer">
