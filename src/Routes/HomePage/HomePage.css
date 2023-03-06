@@ -21,9 +21,11 @@
   width: 100%;
   overflow: hidden;
   background-color: white;
+  border-radius: 10px;
 }
 .divImgImc>img{
   width: 100%;
+
 }
 
 
@@ -31,7 +33,7 @@
 .testIMC{
   color: white;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 0.5fr;
 }
 .testIMC>h5{
   grid-column: 1/3;

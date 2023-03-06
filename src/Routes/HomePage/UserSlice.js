@@ -33,8 +33,8 @@ export const AddIMC = createAsyncThunk(
     const userFound = {...users.find(user=> user.id === id)}
     if(userFound){
       let usertmp = {...userFound}
-      usertmp.IMC=[...userFound.IMC,{...IMCValue}].sort((a,b)=>new Date(b.date) - new Date(a.date))
-      console.log(usertmp)
+      usertmp.IMC=[...userFound.IMC,{...IMCValue}]//.sort((a,b)=>new Date(a.date) - new Date(b.date))
+      //sort a revoir
       if(token){
         const response = await fetch(`${BaseUrl}user/${id}.json?auth=${token}`,{
           method:"PATCH",

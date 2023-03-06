@@ -57,15 +57,19 @@ export const HomePage=()=>{
       <div className="testIMC">
         <h5>vous pouvez faire un test pour voir votre IMC ici :</h5>
         <form onSubmit={onSubmitHandler}>
-          <label htmlFor="inputTaille">Entrer votre taille :</label>
+          <label htmlFor="inputTaille">Entrer votre taille (en metre):</label>
           <input type="number" id="inputTaille" min="0"  max="2.5" step="0.01" ref={TailleRef}/>
-          <label htmlFor="inputPoids">entrer votre poids : </label>
+          <label htmlFor="inputPoids">entrer votre poids (en kilogramme   ): </label>
           <input type="number" id="inputPoids" min="0" max="300" step="0.1" ref={PoidsRef}/>
           <button>Calculer</button>
         </form>
         <div>
-          <p>IMC: {IMC}</p>
-          <p>vous etes en : <b className={msg}>{msg}</b></p>
+          {msg&&
+            <>
+              <p>IMC: {IMC}</p>
+              <p>vous etes en : <b className={msg}>{msg}</b></p>
+            </>
+          }
         </div>
       </div>
     </div>

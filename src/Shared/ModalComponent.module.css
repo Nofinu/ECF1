@@ -13,4 +13,6 @@
   background-color: rgb(20, 20, 20);
   color: black;
   border-radius: 10px;
+  max-height: 85vh;
+  overflow: auto;
 }

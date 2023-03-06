@@ -35,7 +35,9 @@ export const FormImc =(props)=>{
       <input type="date" id="inputDateIMC" ref={dateRef} />
       <label htmlFor="inputPoidsIMC">Entrer votre poids :</label>
       <input type="number" id="inputPoidsIMC" ref={poidsRef} />
-      <button></button>
+      <div>
+        <button>Ajouter</button>
+      </div>
     </form>
   )
 }

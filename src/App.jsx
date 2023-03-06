@@ -19,7 +19,7 @@ const onClickLogOutHandler=()=>{
       <header className="AppHeader">
         <nav>
           <div> 
-            <NavLink className="navLink" to="/">eIMC</NavLink>
+            <NavLink className="navLink" to="/"> <img className='imgSvg' src="https://icons.getbootstrap.com/assets/icons/globe2.svg" alt="" /> eIMC</NavLink>
             {
               user? <NavLink className="navLink" to="/user">User</NavLink>
               :

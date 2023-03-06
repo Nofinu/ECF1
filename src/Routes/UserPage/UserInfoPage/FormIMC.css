@@ -10,3 +10,26 @@
 .FormIMC>hr{
   width: 100%;
 }
+.FormIMC>div{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.FormIMC>input{
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+}
+
+.FormIMC>div>button{
+  width: 80px;
+  height: 35px;
+  margin-top: 10px;
+  background-color: transparent;
+  color: rgb(21, 120, 150);
+  border-radius: 5px;
+  border: solid rgb(21, 120, 150) 1px;
+} 
+.FormIMC>div>button:hover{
+  background-color: rgb(21, 120, 150);
+  color: var(--white--);
+} 
