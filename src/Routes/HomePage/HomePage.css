@@ -1,0 +1,27 @@
+
+.HomePageContainer{
+  background-color: var(--black--);
+  width: 60%;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+.HomePageContainer>h2{
+  color: var(--white--);
+  margin: 10px 0 5px 0;
+}
+.HomePageContainer>p{
+  color: var(--white--);
+}
+.HomePageContainer>h4{
+  color: var(--white--);
+  margin-bottom: 3px;
+}
+.divImgImc{
+  width: 100%;
+  overflow: hidden;
+  background-color: white;
+}
+.divImgImc>img{
+  width: 100%;
+}

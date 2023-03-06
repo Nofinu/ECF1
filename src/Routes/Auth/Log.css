@@ -1,10 +1,26 @@
 .FormLog{
-  background-color: black;
+  background-color: rgb(15, 15, 15);
   width: 50%;
   margin: 25px auto;
   border-radius: 10px;
   display: flex;
   flex-direction: column; 
-  color: white;
+  color: rgb(245, 243, 243);
   padding: 15px;
+}
+
+.divButtonAuth{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.divButtonAuth>button{
+  margin-top: 10px;
+  width: 80px;
+  height: 35px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(15, 125, 158);
+  color: rgb(245, 243, 243);
+  font-size: 20px;
+  font-family: sans-serif;
 }

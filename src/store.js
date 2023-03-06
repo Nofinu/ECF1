@@ -5,7 +5,7 @@ import AuthSlice from "./Routes/Auth/AuthSlice";
 
 const store = configureStore({
   reducer:{
-    Auth:AuthSlice,
+    auth:AuthSlice,
   }
 })
 

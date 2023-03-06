@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate, useSearchParams } from "react-router-dom"
-import { signIn, signUp } from "./AuthSlice"
+import { AddUserEmail, FetchUserEmail, signIn, signUp } from "./AuthSlice"
 import "./Log.css"
 
 export const LogPage=()=>{
@@ -16,6 +16,7 @@ export const LogPage=()=>{
   const passwordRef = useRef()
 
   const user =useSelector(state=>state.auth.user)
+  const userEmail = useSelector(state=>state.auth.userEmail)
 
 
   const onSubmitHandler=async (e)=>{
@@ -34,8 +35,18 @@ export const LogPage=()=>{
     }
   }
 
+  const FetchIdUser=async ()=>{
+    if(mode === "in"){
+      await dispatch(FetchUserEmail())
+    }
+    else{
+      await dispatch(AddUserEmail({email:userEmail}))
+    }
+  }
+
   useEffect(()=>{
     if(user){
+      FetchIdUser()
       navigate("/")
     }
   },[user,navigate])
@@ -48,8 +59,8 @@ export const LogPage=()=>{
 
       <label htmlFor="">Password :</label>
       <input type="password" ref={passwordRef}/>
-      <div>
-        <button>Send</button>
+      <div className="divButtonAuth">
+        <button>{mode==="in"?"Log In":"Register"}</button>
       </div>
     </form>
   )

@@ -1,0 +1,37 @@
+:root{
+  --white--:rgb(245, 243, 243);
+  --black--:rgb(15, 15, 15);
+}
+
+.AppHeader{
+background-color: var(--black--);
+height: 50px;
+}
+
+.AppHeader>nav{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLink{
+  color: var(--white--);
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.AuthLink{
+  margin-right: 15px;
+  color: var(--white--);
+  text-decoration: none;
+  border:solid var(--white--) 1px ;
+  padding: 3px;
+  border-radius: 5px;
+}
+.AuthLink:hover{
+  background-color: var(--white--);
+  color: var(--black--);
+}

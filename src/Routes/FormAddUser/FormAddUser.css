@@ -1,0 +1,37 @@
+
+.FormAddUser{
+  background-color: var(--black--);
+  width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px auto;
+  color: var(--white--);
+  display: flex;
+  flex-direction: column;
+
+}
+.divRadioButton{
+  margin: 10px 0 5px 0;
+}
+.Radiobtn{
+  margin-right: 25px;
+}
+
+.textInput{
+  margin: 5px 0 3px 0 ;
+}
+.divButtonAddUser{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.divButtonAddUser>button{
+  margin-top: 10px;
+  width: 80px;
+  height: 35px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(15, 125, 158);
+  color: rgb(245, 243, 243);
+  font-size: 20px;
+  font-family: sans-serif;
+}
