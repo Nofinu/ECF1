@@ -19,32 +19,10 @@ export const signIn= createAsyncThunk(
 
     const data = await response.json()
 
-    return {data:data,email:credentials.email}
+    return data
   }
 )
 
-export const AddUserEmail = createAsyncThunk(
-  "auth/AddUserEmail",
-  async (credentials,{getState})=>{
-    const token = getState().auth.user.idToken
-    if(token){
-      const response = await fetch(`${BaseUrl}emailuser.json?auth=${token}`,{
-        method:"POST",
-        headers:{
-          "Content-Type":"application/json",
-        },
-        body:JSON.stringify(credentials)
-      })
-      if(!response.ok){
-        throw new Error('error when adding the emailUser')
-      }
-
-      const data = await response.json()
-
-      return data
-    }
-  }
-)
 
 export const signUp = createAsyncThunk(
   "auth/signUp",
@@ -67,31 +45,11 @@ export const signUp = createAsyncThunk(
   }
 )
 
-export const FetchUserEmail = createAsyncThunk(
-  "auth/FetchUserEmail",
-  async () =>{
-    const response = await fetch(`${BaseUrl}emailuser.json`)
-    
-    if(!response.ok){
-      throw new Error('error xhen fetching userEmail')
-    }
-
-    const data = await response.json()
-    const tmpTab=[]
-    for(let key in data){
-      tmpTab.push({id:key,...data[key]})
-    }
-
-    return tmpTab
-  }
-)
 
 const AuthSlice= createSlice({
   name:"AuthSlice",
   initialState:{
     user:null,
-    userEmail:null,
-    userId:null,
     isLoading:false,
     error:null
   },
@@ -113,8 +71,7 @@ const AuthSlice= createSlice({
     builder.addCase(signIn.fulfilled, (state, action) => {
       state.isLoading = false
       state.error = null
-      state.user = action.payload.data
-      state.userEmail = action.payload.email
+      state.user = action.payload
       localStorage.setItem('token', action.payload.idToken)
     })
     builder.addCase(signIn.rejected, (state) => {
@@ -132,8 +89,7 @@ const AuthSlice= createSlice({
     builder.addCase(signUp.fulfilled, (state, action) => {
       state.isLoading = false
       state.error = null
-      state.user = action.payload.data
-      state.userEmail = action.payload.email
+      state.user = action.payload
       localStorage.setItem('token', action.payload.idToken)
     })
 
@@ -143,16 +99,6 @@ const AuthSlice= createSlice({
       alert("Incorect Email or Password")
     })
 
-    builder.addCase(AddUserEmail.fulfilled,(state,action)=>{
-      state.userId = action.payload.name
-    })
-
-    builder.addCase(FetchUserEmail.fulfilled,(state,action)=>{
-      const emailFound = action.payload.find(email=> email.email === state.userEmail)
-      if(emailFound){
-        state.userId = emailFound.id
-      }
-    })
   }
 })
 

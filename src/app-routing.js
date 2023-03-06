@@ -4,6 +4,8 @@ import {HomePage} from "./Routes/HomePage/HomePage"
 import {LogPage} from "./Routes/Auth/LogPage"
 import { FormAddUser } from "./Routes/FormAddUser/FormAddUser";
 import ProtectedRoute from "./Component/ProtectedRoute"
+import { UserPage } from "./Routes/UserPage/UserPage";
+import { UserinfoPage } from "./Routes/UserPage/UserInfoPage/UserInfoPage";
 
 
 export const router = createBrowserRouter([
@@ -20,8 +22,16 @@ export const router = createBrowserRouter([
           element:<LogPage/>
         },
         {
-          path:"/userinformation",
+          path:"/user",
+          element:<ProtectedRoute><UserPage/></ProtectedRoute>
+        },
+        {
+          path:"/user/form/:id",
           element:<ProtectedRoute><FormAddUser/></ProtectedRoute>
+        },
+        {
+          path:"/user/:id",
+          element:<ProtectedRoute><UserinfoPage/></ProtectedRoute>
         }
     ]}
 ])

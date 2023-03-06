@@ -1,0 +1,94 @@
+
+
+.containerUserPage{
+  width: 60%;
+  margin: 20px auto;
+  background-color: var(--black--);
+  color: var(--white--);
+  padding: 10px;
+  border-radius: 10px;
+}
+.containerUserPageHeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.displayUserContainer{
+  width: 85%;
+  margin: 10px auto;
+  border: solid rgb(8, 64, 90) 1px;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.displayUserHeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.displayUserHeader>h4{
+  margin: 10px 0 3px 0;
+}
+.linkDisplayUserinfo{
+  text-decoration: none;
+  border: solid rgb(21, 120, 150) 1px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: rgb(21, 120, 150);
+  margin-top: 10px;
+  height: 30px;
+  padding: 3px;
+}
+.linkDisplayUserinfo:hover{
+  background-color: rgba(21, 120, 150, 0.856) ;
+  color: white;
+}
+
+
+.infoUserContainer{
+  width: 60%;
+  background-color: var(--black--);
+  border-radius: 10px;
+  margin: 20px auto;
+  color: var(--white--);
+  padding: 10px;
+}
+
+.headerInfoUserImc{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.IMCDisplay{
+  border: solid rgba(21, 120, 150, 0.856) 1px;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-left: 5px;
+  display: inline-block;
+  padding: 15px;
+}
+
+
+.modalShowImcContainer{
+  color: var(--white--);
+}
+.btnShowIMC{
+  border: solid rgb(21, 120, 150) 1px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: rgb(21, 120, 150);
+  margin-top: 10px;
+  height: 30px;
+  padding: 3px;
+}
+.btnShowIMC:hover{
+  background-color: rgb(14, 56, 68);
+  color: var(--white--);
+}

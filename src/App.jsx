@@ -20,7 +20,12 @@ const onClickLogOutHandler=()=>{
         <nav>
           <div> 
             <NavLink className="navLink" to="/">eIMC</NavLink>
-
+            {
+              user? <NavLink className="navLink" to="/user">User</NavLink>
+              :
+              <div></div>
+            }
+            
           </div>
           <div>
             { user ?

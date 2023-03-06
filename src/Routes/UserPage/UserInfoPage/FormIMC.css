@@ -1,0 +1,12 @@
+
+.FormIMC{
+  display: flex;
+  flex-direction: column;
+  color: var(--white--);
+}
+.FormIMC>label{
+  margin: 15px 0 5px 0;
+}
+.FormIMC>hr{
+  width: 100%;
+}

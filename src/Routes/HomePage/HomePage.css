@@ -25,3 +25,60 @@
 .divImgImc>img{
   width: 100%;
 }
+
+
+
+.testIMC{
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.testIMC>h5{
+  grid-column: 1/3;
+}
+.testIMC>form{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.testIMC>form>input{
+  width: 160px;
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+}
+.testIMC>form>button{
+  width: 80px;
+  height: 30px;
+  border: solid rgb(17, 100, 155) 1px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: var(--white--);
+  margin-top: 10px;
+}
+.testIMC>form>button:hover{
+  background-color: rgb(17, 100, 155);
+}
+
+.Denutrition{
+  color: rgb(61, 108, 134);
+}
+.maigreur{
+  color: rgb(28, 93, 146);
+}
+.poids{
+  color: var(--white--);
+}
+.surpoids{
+  color: #FFCDAC;
+}
+.modérée{
+  color: #FFCD09;
+}
+.sévère{
+  color: #FF7809;
+}
+.morbide{
+  color: #FF1C09;
+}

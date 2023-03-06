@@ -16,7 +16,6 @@ export const LogPage=()=>{
   const passwordRef = useRef()
 
   const user =useSelector(state=>state.auth.user)
-  const userEmail = useSelector(state=>state.auth.userEmail)
 
 
   const onSubmitHandler=async (e)=>{
@@ -35,19 +34,11 @@ export const LogPage=()=>{
     }
   }
 
-  const FetchIdUser=async ()=>{
-    if(mode === "in"){
-      await dispatch(FetchUserEmail())
-    }
-    else{
-      await dispatch(AddUserEmail({email:userEmail}))
-    }
-  }
+
 
   useEffect(()=>{
     if(user){
-      FetchIdUser()
-      navigate("/")
+    navigate("/")
     }
   },[user,navigate])
 

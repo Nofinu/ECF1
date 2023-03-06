@@ -35,3 +35,49 @@ height: 50px;
   background-color: var(--white--);
   color: var(--black--);
 }
+
+.imgSvg{
+  filter: invert(100%);
+}
+.imgSvgAdd{
+  filter: invert(26%) sepia(13%) saturate(7086%) hue-rotate(105deg) brightness(99%) contrast(91%);
+}
+.imgSvgEdit{
+  filter: invert(45%) sepia(48%) saturate(2519%) hue-rotate(23deg) brightness(94%) contrast(92%);
+}
+.imgSvgSupr{
+  filter: invert(10%) sepia(82%) saturate(4510%) hue-rotate(355deg) brightness(104%) contrast(98%);
+}
+
+.LinkAdd,.LinkEdit,.LinkSupr{
+  padding: 3px;
+  text-decoration: none;
+  margin-right: 10px;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.LinkAdd{
+  color: rgb(11, 109, 32);
+  border: solid rgb(11, 109, 32) 1px;
+}
+.LinkAdd:hover{
+  background-color: rgb(13, 51, 21);
+  color: var(--white--);
+}
+.LinkEdit{
+  color: rgb(179, 125, 10);
+  border: solid rgb(179, 125, 10) 1px;
+}
+.LinkEdit:hover{
+  background-color: rgb(95, 70, 17);
+  color: var(--white--);
+}
+.LinkSupr{
+  color: rgb(167, 12, 12);
+  border: solid rgb(167, 12, 12) 1px;
+}
+.LinkSupr:hover{
+  background-color: rgb(97, 14, 14);
+  color: var(--white--);
+}
