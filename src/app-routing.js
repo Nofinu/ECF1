@@ -6,12 +6,14 @@ import { FormAddUser } from "./Routes/FormAddUser/FormAddUser";
 import ProtectedRoute from "./Component/ProtectedRoute"
 import { UserPage } from "./Routes/UserPage/UserPage";
 import { UserinfoPage } from "./Routes/UserPage/UserInfoPage/UserInfoPage";
+import { ErrorPage } from "./Routes/ErrorPage/ErrorPage";
 
 
 export const router = createBrowserRouter([
   {
     path:"/",
     element:<App/>,
+    errorElement:<ErrorPage/>,
     children:[
         {
         path:"/",
